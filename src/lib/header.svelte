@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import { goto, preloadData } from '$app/navigation';
 </script>
 
 <svelte:head>
@@ -11,6 +12,16 @@
 	<a href="/products">Products</a>
 	<a href="/address">Address</a>
 	<a href="/stocks">Stocks</a>
+
+	<button
+		on:mouseover={async () => {
+			await preloadData('/products');
+		}}
+		on:focus={async () => {
+			await preloadData('/products');
+		}}
+		on:click={() => goto('/products')}>Goto products</button
+	>
 </header>
 
 <style>
