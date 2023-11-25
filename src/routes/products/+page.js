@@ -7,5 +7,5 @@ export const load = async (loadEvent) => {
 	return { ...data, Component: Product, notification };
 };
 
-export const ssr = false;
-export const csr = true;
+export const ssr = true;
+export const csr = false;
