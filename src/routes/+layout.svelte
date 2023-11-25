@@ -3,11 +3,13 @@
 
 	import Footer from '$lib/footer.svelte';
 	import Header from '$lib/header.svelte';
+	export let data;
 </script>
 
 {#if $page.route.id !== '/(auth)/login' && $page.route.id !== '/(auth)/register'}
 	<Header />
 {/if}
+welcome {data.username}
 <slot />
 {#if $page.route.id !== '/(auth)/login' && $page.route.id !== '/(auth)/register'}
 	<Footer />
