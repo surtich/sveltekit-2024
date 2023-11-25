@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
+	import { goto, beforeNavigate } from '$app/navigation';
 
 	const { lang = 'en' } = $page.params;
 
@@ -14,11 +14,20 @@
 
 	let placingOrder = false;
 
+	beforeNavigate((navigation) => {
+		console.log('before navigation', navigation, navigation?.to?.route?.id);
+		if (navigation?.to?.route?.id === '/products') {
+			if (!placingOrder) {
+				navigation.cancel();
+				alert('You must place an order first!');
+			}
+		}
+	});
+
 	function handleClick() {
 		placingOrder = true;
 		setTimeout(() => {
-			placingOrder = false;
-			goto('/products', { replaceState: true });
+			goto('/products');
 		}, 2000);
 	}
 </script>
