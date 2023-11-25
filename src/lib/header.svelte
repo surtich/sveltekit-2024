@@ -15,6 +15,15 @@
 	<a href="/news">News</a>
 	{#if !$page.data.username}
 		<a href="/login">Login</a>
+	{:else}
+		<button
+			on:click={() => {
+				console.log('>>>>> logout');
+				fetch('/api/auth/logout', {
+					method: 'POST'
+				});
+			}}>Logout ({$page.data.username})</button
+		>
 	{/if}
 	<button
 		on:mouseover={async () => {
