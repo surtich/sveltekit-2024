@@ -13,3 +13,7 @@
 </script>
 
 <h1>{greeting}</h1>
+
+<a href="/blog">Blog</a>
+<a href="/docs">Docs</a>
+<a href="/products">Products</a>
