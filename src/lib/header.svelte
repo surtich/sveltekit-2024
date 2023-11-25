@@ -8,7 +8,7 @@
 
 <header class="layout-header">
 	<a href="/">Home</a>
-	<a href="/products" data-sveltekit-reload>Products</a>
+	<a href="/products">Products</a>
 	<a href="/address">Address</a>
 	<a href="/stocks">Stocks</a>
 </header>
