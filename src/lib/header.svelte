@@ -10,6 +10,7 @@
 	<a href="/">Home</a>
 	<a href="/products">Products</a>
 	<a href="/address">Address</a>
+	<a href="/stocks">Stocks</a>
 </header>
 
 <style>
