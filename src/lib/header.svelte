@@ -12,6 +12,7 @@
 	<a href="/products">Products</a>
 	<a href="/address">Address</a>
 	<a href="/stocks">Stocks</a>
+	<a href="/news">News</a>
 
 	<button
 		on:mouseover={async () => {
