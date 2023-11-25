@@ -13,8 +13,9 @@
 	<a href="/address">Address</a>
 	<a href="/stocks">Stocks</a>
 	<a href="/news">News</a>
-	<a href="/login">Login</a>
-
+	{#if !$page.data.username}
+		<a href="/login">Login</a>
+	{/if}
 	<button
 		on:mouseover={async () => {
 			await preloadData('/products');
