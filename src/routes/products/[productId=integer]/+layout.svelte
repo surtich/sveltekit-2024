@@ -1,0 +1,2 @@
+Featured product
+<slot />
