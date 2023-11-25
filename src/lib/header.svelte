@@ -1,6 +1,7 @@
 <header class="layout-header">
 	<a href="/">Home</a>
 	<a href="/products">Products</a>
+	<a href="/address">Address</a>
 </header>
 
 <style>
