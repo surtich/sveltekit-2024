@@ -6,3 +6,5 @@ export const load = async (serverLoadEvent) => {
 	const products = await response.json();
 	return { title, products };
 };
+
+export const prerender = true;
