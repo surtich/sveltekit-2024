@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { goto, preloadData } from '$app/navigation';
+	import { goto, invalidateAll, preloadData } from '$app/navigation';
 </script>
 
 <svelte:head>
@@ -17,11 +17,13 @@
 		<a href="/login">Login</a>
 	{:else}
 		<button
-			on:click={() => {
-				console.log('>>>>> logout');
-				fetch('/api/auth/logout', {
+			on:click={async () => {
+				const response = await fetch('/api/auth/logout', {
 					method: 'POST'
 				});
+				if (response.ok) {
+					invalidateAll();
+				}
 			}}>Logout ({$page.data.username})</button
 		>
 	{/if}
