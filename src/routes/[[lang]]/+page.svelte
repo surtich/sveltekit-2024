@@ -18,7 +18,7 @@
 		placingOrder = true;
 		setTimeout(() => {
 			placingOrder = false;
-			goto('/products');
+			goto('/products', { replaceState: true });
 		}, 2000);
 	}
 </script>
