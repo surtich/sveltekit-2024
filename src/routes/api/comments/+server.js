@@ -13,10 +13,7 @@ export async function POST(requestEvent) {
 		text
 	};
 	comments.push(newComment);
-	return new Response(JSON.stringify(newComment), {
-		headers: {
-			'Content-Type': 'application/json'
-		},
+	return json(newComment, {
 		status: 201
 	});
 }
