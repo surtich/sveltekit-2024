@@ -1,9 +1,9 @@
 <script>
-	import { invalidate } from '$app/navigation';
+	import { invalidateAll } from '$app/navigation';
 	export let data;
 
 	function refresh() {
-		invalidate('stocks:actively-trading');
+		invalidateAll();
 	}
 </script>
 
