@@ -16,3 +16,11 @@ export async function PATCH(requestEvent) {
 	comment.text = text;
 	return json(comment);
 }
+
+export function DELETE({ params }) {
+	const { commentId } = params;
+	const commentIndex = comments.findIndex((comment) => comment.id === parseInt(commentId));
+	const comment = comments[commentIndex];
+	comments.splice(commentIndex, 1);
+	return json(comment);
+}
