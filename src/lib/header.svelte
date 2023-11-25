@@ -13,6 +13,7 @@
 	<a href="/address">Address</a>
 	<a href="/stocks">Stocks</a>
 	<a href="/news">News</a>
+	<a href="/login">Login</a>
 
 	<button
 		on:mouseover={async () => {
