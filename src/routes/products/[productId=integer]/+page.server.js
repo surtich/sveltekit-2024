@@ -10,7 +10,8 @@ export const load = async (serverLoadEvent) => {
 	console.log('response', response.status);
 	const product = await response.json();
 	const title = 'Product details';
-	return { title, product };
+	const notification = 'End of 50% off sale!';
+	return { notification, title, product };
 };
 
 export const prerender = 'auto';

@@ -2,5 +2,6 @@ import Product from './product.svelte';
 
 export const load = async (loadEvent) => {
 	const { data } = loadEvent;
-	return { ...data, Component: Product };
+	const notification = 'End of season sale!';
+	return { ...data, Component: Product, notification };
 };
