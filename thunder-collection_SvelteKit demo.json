@@ -1,0 +1,142 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "SvelteKit demo",
+    "dateExported": "2023-11-26T01:44:40.696Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "39edc808-3f48-4b1f-b9da-c11eb3440798",
+            "colId": "cdf7cfbc-99a6-4f55-8869-9a8570342ff7",
+            "containerId": "",
+            "name": "http://localhost:5173/api/comments",
+            "url": "http://localhost:5173/api/comments",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-25T22:51:06.078Z",
+            "modified": "2023-11-25T22:51:06.078Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "71e0d085-ee4c-4196-a058-288df754b2d4",
+            "colId": "cdf7cfbc-99a6-4f55-8869-9a8570342ff7",
+            "containerId": "",
+            "name": "http://localhost:5173/api/login",
+            "url": "http://localhost:5173/api/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-11-25T22:51:19.685Z",
+            "modified": "2023-11-26T01:43:55.308Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"pepe\",\n  \"password\": \"123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "54b86b02-a1e3-47cb-a46f-500bb6ff9486",
+            "colId": "cdf7cfbc-99a6-4f55-8869-9a8570342ff7",
+            "containerId": "",
+            "name": "http://localhost:5173/api/logout",
+            "url": "http://localhost:5173/api/auth/logout",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2023-11-26T01:44:06.473Z",
+            "modified": "2023-11-26T01:44:29.263Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"pepe\",\n  \"password\": \"123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2da53e3f-3bc8-42cd-92d2-6d7fe5738c4d",
+            "colId": "cdf7cfbc-99a6-4f55-8869-9a8570342ff7",
+            "containerId": "",
+            "name": "http://localhost:5173/api/comments/[commentId]",
+            "url": "http://localhost:5173/api/comments/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-11-25T22:51:27.073Z",
+            "modified": "2023-11-25T22:51:27.073Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0dfeb898-b43f-4069-bc92-5073cff5d432",
+            "colId": "cdf7cfbc-99a6-4f55-8869-9a8570342ff7",
+            "containerId": "",
+            "name": "http://localhost:5173/api/comments/[commentId] Copy",
+            "url": "http://localhost:5173/api/comments/3",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-11-25T22:51:50.919Z",
+            "modified": "2023-11-25T22:51:50.919Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0d8163e6-a4ef-4c90-bb77-a6dc7d676bf4",
+            "colId": "cdf7cfbc-99a6-4f55-8869-9a8570342ff7",
+            "containerId": "",
+            "name": "http://localhost:5173/api/comments/[commentId]",
+            "url": "http://localhost:5173/api/comments/1",
+            "method": "PATCH",
+            "sortNum": 70000,
+            "created": "2023-11-25T22:52:06.968Z",
+            "modified": "2023-11-25T22:52:06.968Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text\": \"Modified comment\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bbe2e004-d66f-4faa-9b88-0d14f72439f3",
+            "colId": "cdf7cfbc-99a6-4f55-8869-9a8570342ff7",
+            "containerId": "",
+            "name": "http://localhost:5173/api/comments",
+            "url": "http://localhost:5173/api/comments",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-11-25T22:52:18.417Z",
+            "modified": "2023-11-25T22:52:18.417Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text\": \"New comment\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
