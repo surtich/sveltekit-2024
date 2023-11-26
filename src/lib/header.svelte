@@ -16,16 +16,10 @@
 	{#if !$page.data.username}
 		<a href="/login">Login</a>
 	{:else}
-		<button
-			on:click={async () => {
-				const response = await fetch('/api/auth/logout', {
-					method: 'POST'
-				});
-				if (response.ok) {
-					invalidateAll();
-				}
-			}}>Logout ({$page.data.username})</button
-		>
+		<!--Al no estar en la ruta de login el action tiene que indicar la ruta y la acción-->
+		<form method="POST" action="/login?/logout&redirectTo={$page.url.pathname}">
+			<button type="submit">Logout</button>
+		</form>
 	{/if}
 	<button
 		on:mouseover={async () => {

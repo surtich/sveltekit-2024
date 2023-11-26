@@ -1,4 +1,4 @@
-import { fail } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit';
 
 export const actions = {
 	async login({ request, cookies }) {
@@ -17,5 +17,9 @@ export const actions = {
 		cookies.set('token', 'token_value', { path: '/' });
 
 		return { success: true };
+	},
+	logout: ({ cookies, url }) => {
+		cookies.delete('token', { path: '/' });
+		throw redirect(303, url.searchParams.get('redirectTo') || '/');
 	}
 };
