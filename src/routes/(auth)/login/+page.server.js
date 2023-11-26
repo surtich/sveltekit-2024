@@ -1,7 +1,7 @@
 import { fail } from '@sveltejs/kit';
 
 export const actions = {
-	async default({ request, cookies }) {
+	async login({ request, cookies }) {
 		const form = await request.formData();
 		const username = form.get('username');
 		const password = form.get('password');

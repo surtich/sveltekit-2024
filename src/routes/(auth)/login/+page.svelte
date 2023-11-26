@@ -10,7 +10,7 @@
 	<p style="color: green;">You are now logged in!</p>
 {/if}
 
-<form method="POST">
+<form method="POST" action="?/login">
 	<label for="username">Username</label><br />
 	<input type="text" name="username" id="username" placeholder="Username" />
 	<br />
