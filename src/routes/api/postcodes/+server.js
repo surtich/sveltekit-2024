@@ -1,5 +1,6 @@
+import { PUBLIC_BASE_URL } from '$env/static/public';
 export async function GET() {
-	const response = await fetch('http://localhost:4000/postcodes');
+	const response = await fetch(`${PUBLIC_BASE_URL}/postcodes`);
 	const postcodes = await response.json();
 	const appPostCodes = postcodes.map((postcode) => {
 		return {
