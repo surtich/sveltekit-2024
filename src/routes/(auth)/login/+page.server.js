@@ -11,7 +11,7 @@ export const actions = {
 		}
 
 		if (!password) {
-			return fail(400, { passwordMissing: true });
+			return fail(400, { passwordMissing: true, username });
 		}
 
 		cookies.set('token', 'token_value', { path: '/' });

@@ -12,7 +12,14 @@
 
 <form method="POST" action="?/login">
 	<label for="username">Username</label><br />
-	<input type="text" name="username" id="username" placeholder="Username" />
+	<input
+		type="text"
+		name="username"
+		id="username"
+		placeholder="Username"
+		value={form?.username || ''}
+	/>
+
 	<br />
 	{#if form?.usernameMissing}
 		<p style="color: red;">Username is required!</p>
