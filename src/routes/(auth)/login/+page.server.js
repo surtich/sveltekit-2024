@@ -1,7 +1,7 @@
 import { fail, redirect } from '@sveltejs/kit';
 
 export const actions = {
-	async login({ request, cookies }) {
+	async login({ request, cookies, url }) {
 		const form = await request.formData();
 		const username = form.get('username');
 		const password = form.get('password');
@@ -16,7 +16,7 @@ export const actions = {
 
 		cookies.set('token', 'token_value', { path: '/' });
 
-		return { success: true };
+		throw redirect(303, url.searchParams.get('redirectTo') || '/');
 	},
 	logout: ({ cookies, url }) => {
 		cookies.delete('token', { path: '/' });

@@ -2,15 +2,14 @@
 	import { page } from '$app/stores';
 	export let form;
 
-	$: console.log('form', form); // accesible solo en /login
-	$: console.log('page', $page.form, $page.status); // accesible en cualquier componente
+	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 </script>
 
 {#if form?.success}
 	<p style="color: green;">You are now logged in!</p>
 {/if}
 
-<form method="POST" action="?/login">
+<form method="POST" action={'?/login&redirectTo=' + redirectTo}>
 	<label for="username">Username</label><br />
 	<input
 		type="text"
