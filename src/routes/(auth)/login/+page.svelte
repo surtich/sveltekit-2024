@@ -1,5 +1,7 @@
 <script>
 	import { page } from '$app/stores';
+	import { enhance } from '$app/forms';
+
 	export let form;
 
 	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
@@ -9,7 +11,7 @@
 	<p style="color: green;">You are now logged in!</p>
 {/if}
 
-<form method="POST" action={'?/login&redirectTo=' + redirectTo}>
+<form method="POST" action={'?/login&redirectTo=' + redirectTo} use:enhance>
 	<label for="username">Username</label><br />
 	<input
 		type="text"
