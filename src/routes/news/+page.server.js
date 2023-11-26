@@ -1,6 +1,8 @@
 import { redirect } from '@sveltejs/kit';
+import { DB_USER, DB_PASSWORD } from '$env/static/private';
 
 export const load = async ({ parent, url }) => {
+	console.log(`Connecting to database with username ${DB_USER} and password ${DB_PASSWORD}`);
 	const { username } = await parent();
 
 	if (!username) {
