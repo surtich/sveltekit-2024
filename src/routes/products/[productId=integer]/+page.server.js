@@ -16,4 +16,4 @@ export const load = async (serverLoadEvent) => {
 	return { notification, title, product };
 };
 
-export const prerender = 'auto';
+//export const prerender = 'auto';

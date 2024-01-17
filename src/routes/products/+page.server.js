@@ -8,4 +8,4 @@ export const load = async (serverLoadEvent) => {
 	return { title, products };
 };
 
-export const prerender = true;
+//export const prerender = true;
